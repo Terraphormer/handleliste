@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:hsl(248, 54%, 89%);
+    text-align: center;
+    margin: 0;
+}
+
+ul {
+    border-radius: 1em;
+    margin: 8px 8px;
+    padding: 0;
+    text-align: left;
+    font-family: 'Courier New', monospace;
+}
+
+ul li.checked::before {
+    content: ""; 
+    position: absolute; 
+    left: 13px; 
+    top: 17px; 
+    width: 3px;
+    height: 6px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 30px;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li.unchecked {
+    background: hsl(210, 77%, 68%);
+}
+
+ul li.unchecked:nth-child(odd) {
+    background: hsl(210, 76%, 80%);
+}
+
+ul li.checked {
+    background: hsl(210, 81%, 79%);
+    color: dimgrey;;
+}
+
+
+ul li.checked:nth-child(odd) {
+    background: hsl(210, 100%, 85%);
+}
+
+ul li:first-child {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+ul li:last-child {
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.wrapper {
+    background-color: hsl(248, 54%, 89%);
+}
+
+.header, .hiddenmenu {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    color: white;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: hsl(105, 40%, 56%);
+    display: grid;
+}
+
+.header {
+    grid-template: 50px 50px 50px / 16.6% 16.6% 16.6% 16.6% 16.6% auto;
+}
+
+.hiddenmenu {
+    z-index: 2;
+    grid-template: 50px / 16.6% 16.6% 16.6% 16.6% 16.6% auto;
+}
+
+.menubtn1, .menubtn2, .menubtn3 {
+    border-bottom: 1px solid black;
+    background-color: hsl(105, 45%, 51%);
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.menubtn1 {
+    grid-column: 1 / 3;
+    border-right: 1px solid black;
+}
+
+.menubtn2 {
+    grid-column: 3 / 5;
+}
+.menubtn3 {
+    grid-column: 5 / 7;
+    border-left: 1px solid black;
+}
+
+.nouser {
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+}
+
+.headerUserName {
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+}
+
+.leggtil {
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+    margin: 0;
+    align-self: center;
+/*     border-radius: 3em;
+    border: 1px solid black; */
+}
+
+.leggtilmiddag {
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+    margin: 10px;
+    align-self: center;
+}
+
+.leggtilinput {
+    width: 70vw;
+    height: 30px;
+    float: left;
+    margin-left: 5vw;
+}
+
+.leggtilknapp {
+    width: 20vw;
+    height: 30px;
+    float: right;
+    margin-right: 5vw;
+}
+
+.hidmenubtn1, .hidmenubtn2, .hidmenubtn3 {
+    border-bottom: 1px solid black;
+    background-color: hsl(0, 0%, 67%);
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hidmenubtn1 {
+    grid-column: 1 / 3;
+    border-right: 1px solid black;
+}
+
+.hidmenubtn2 {
+    grid-column: 3 / 5;
+}
+.hidmenubtn3 {
+    grid-column: 5 / 7;
+    border-left: 1px solid black;
+}
+
+.item {
+    align-content: space-around;
+    border-style: solid;
+    border-color: black;
+    width: 90%;
+}
+
+/* input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+} */
+
+.knapp {
+    width: 100%;
+}
+
+.register {
+    display: grid;
+    grid-template:  'input1 input1 input1'
+                    'input2 input2 input2'
+                    'input3 input3 input3'
+                    'registrer registrer reset'
+                    'extusr extusr extusr'
+                    'nybruker nybruker nybruker';
+}
+
+.labelu { grid-area: labelu; }
+.labelp { grid-area: labelp; }
+.labelcp { grid-area: labelcp; }
+.inputuname { grid-area: input1; }
+.inputpass { grid-area: input2; }
+.inputconfpass { grid-area: input3; }
+.btnreg { grid-area: registrer; }
+.btnres { grid-area: reset;}
+.extusr { grid-area: extusr;}
+.nybruker { grid-area: nybruker;}
+
+.knapp, .inputuname, .inputpass, .inputconfpass, .btnres, .btnreg {
+    height: 30px;
+}
+
+.button2 {
+    height: 30px;
+    width: 70vw;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.ingrediens {
+    height: 30px;
+    width: 80vw;
+}
+
+.toggleFullført {
+    text-align-last: justify;
+    text-align: start;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+#toggleFullført {
+    border-radius: 1em;
+    border-width: 1px;
+    height: 30px;
+}
+
+#toggleHide {
+    border-radius: 1em;
+    border-width: 1px;
+    height: 30px;
+}
+
+.dropdown {
+    background-color: rgb(238, 238, 238);
+    color: rgb(68, 68, 68);
+    cursor: pointer;
+    padding: 14px;
+    margin: 0px 8px;
+    margin-top: 8px;
+    width: 95%;
+    text-align: left;
+    border: none;
+    border-radius: 1em;
+    outline: none;
+    transition: 0.4s;
+}
+
+.dropdown:nth-of-type(odd) {
+    background-color: rgb(224, 224, 224);
+}
+
+.panel {
+    margin: 0px 15px;
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+/* .marker::marker {
+    content: "";
+} */
+
+.nomarker::marker {
+    content: "";
+}
