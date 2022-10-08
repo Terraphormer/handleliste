@@ -25,7 +25,8 @@ while ($row = $result->fetch_assoc()) {
         $json_array[] = $output;
     }
 }
-echo json_encode($json_array);
+$reversed = array_reverse(array: $json_array);
+echo json_encode($reversed);
 $stmt->close();
 $conn->close();
 ?>
