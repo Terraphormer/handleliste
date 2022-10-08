@@ -17,43 +17,43 @@ while ($row = $result->fetch_assoc()) {
     if (!empty($row['navn'])) {
         echo "<button class='dropdown'>" . $row['navn'] . "</button><div class='panel'><ul id=" . $row['id'] . ">";
 
-        if (!empty($row['ing1'])) {
+        if (!empty(trim($row['ing1']))) {
             echo "<li class='marker'>" . $row['ing1'] . "</li>";
         }
-        if (!empty($row['ing2'])) {
+        if (!empty(trim($row['ing2']))) {
             echo "<li class='marker'>" . $row['ing2'] . "</li>";
         }
-        if (!empty($row['ing3'])) {
+        if (!empty(trim($row['ing3']))) {
             echo "<li class='marker'>" . $row['ing3'] . "</li>";
         }
-        if (!empty($row['ing4'])) {
+        if (!empty(trim($row['ing4']))) {
             echo "<li class='marker'>" . $row['ing4'] . "</li>";
         }
-        if (!empty($row['ing5'])) {
+        if (!empty(trim($row['ing5']))) {
             echo "<li class='marker'>" . $row['ing5'] . "</li>";
         }
-        if (!empty($row['ing6'])) {
+        if (!empty(trim($row['ing6']))) {
             echo "<li class='marker'>" . $row['ing6'] . "</li>";
         }
-        if (!empty($row['ing7'])) {
+        if (!empty(trim($row['ing7']))) {
             echo "<li class='marker'>" . $row['ing7'] . "</li>";
         }
-        if (!empty($row['ing8'])) {
+        if (!empty(trim($row['ing8']))) {
             echo "<li class='marker'>" . $row['ing8'] . "</li>";
         }
-        if (!empty($row['ing9'])) {
+        if (!empty(trim($row['ing9']))) {
             echo "<li class='marker'>" . $row['ing9'] . "</li>";
         }
-        if (!empty($row['ing10'])) {
+        if (!empty(trim($row['ing10']))) {
             echo "<li class='marker'>" . $row['ing10'] . "</li>";
         }
-        if (!empty($row['ing10'])) {
+        if (!empty(trim($row['ing11']))) {
             echo "<li class='marker'>" . $row['ing11'] . "</li>";
         }
-        if (!empty($row['ing10'])) {
+        if (!empty(trim($row['ing12']))) {
             echo "<li class='marker'>" . $row['ing12'] . "</li>";
         }
-        if (!empty($row['ing10'])) {
+        if (!empty(trim($row['ing13']))) {
             echo "<li class='marker'>" . $row['ing13'] . "</li>";
         }
     }

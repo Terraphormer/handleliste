@@ -244,6 +244,7 @@ a {
     height: 30px;
     width: 70vw;
     margin-bottom: 8px;
+    border-radius: 0.9em;
     padding: 0;
 }
 
