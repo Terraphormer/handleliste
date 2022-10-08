@@ -47,6 +47,15 @@ while ($row = $result->fetch_assoc()) {
         if (!empty($row['ing10'])) {
             echo "<li class='marker'>" . $row['ing10'] . "</li>";
         }
+        if (!empty($row['ing10'])) {
+            echo "<li class='marker'>" . $row['ing11'] . "</li>";
+        }
+        if (!empty($row['ing10'])) {
+            echo "<li class='marker'>" . $row['ing12'] . "</li>";
+        }
+        if (!empty($row['ing10'])) {
+            echo "<li class='marker'>" . $row['ing13'] . "</li>";
+        }
     }
     echo "</ul><button class='button2'>Legg ingredienser i handleliste</button></div>";
 }

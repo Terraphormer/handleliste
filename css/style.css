@@ -299,9 +299,9 @@ a {
     overflow: hidden;
 }
 
-/* .marker::marker {
-    content: "";
-} */
+.marker::marker {
+    content: "+";
+}
 
 .nomarker::marker {
     content: "";

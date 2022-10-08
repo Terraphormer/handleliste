@@ -8,9 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (empty(trim($_POST['navn'])) || empty(trim($_POST['igr1'])) || empty(trim($_POST['igr2']))) {
         echo "Retten må ha navn, og inneholde minst 2 ingredienser.";
     } else {
-        $sql = "INSERT INTO middag (navn, ing1, ing2, ing3, ing4, ing5, ing6, ing7, ing8, ing9, ing10, brukerid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO middag (navn, ing1, ing2, ing3, ing4, ing5, ing6, ing7, ing8, ing9, ing10, ing11, ing12, ing13, brukerid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssssssssss", $param_navn, $param_ing1, $param_ing2, $param_ing3, $param_ing4, $param_ing5, $param_ing6, $param_ing7, $param_ing8, $param_ing9, $param_ing10, $param_brukerid);
+        $stmt->bind_param("sssssssssssssss", $param_navn, $param_ing1, $param_ing2, $param_ing3, $param_ing4, $param_ing5, $param_ing6, $param_ing7, $param_ing8, $param_ing9, $param_ing10, $param_ing11, $param_ing12, $param_ing13, $param_brukerid);
         $param_navn = $_POST['navn'];
         $param_ing1 = $_POST['igr1'];
         $param_ing2 = $_POST['igr2'];
@@ -22,6 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $param_ing8 = $_POST['igr8'];
         $param_ing9 = $_POST['igr9'];
         $param_ing10 = $_POST['igr10'];
+        $param_ing11 = $_POST['igr11'];
+        $param_ing12 = $_POST['igr12'];
+        $param_ing13 = $_POST['igr13'];
         $param_brukerid = $_SESSION['id'];
         $stmt->execute();
         $stmt->close();
@@ -42,6 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <input type="text" placeholder="Ingrediens #8" class="ingrediens" name="igr8" autocapitalize="on" autocomplete="off">
     <input type="text" placeholder="Ingrediens #9" class="ingrediens" name="igr9" autocapitalize="on" autocomplete="off">
     <input type="text" placeholder="Ingrediens #10" class="ingrediens" name="igr10" autocapitalize="on" autocomplete="off">
+    <input type="text" placeholder="Ingrediens #11" class="ingrediens" name="igr11" autocapitalize="on" autocomplete="off">
+    <input type="text" placeholder="Ingrediens #12" class="ingrediens" name="igr12" autocapitalize="on" autocomplete="off">
+    <input type="text" placeholder="Ingrediens #13" class="ingrediens" name="igr13" autocapitalize="on" autocomplete="off">
     <input type="submit" value="Opprett middagsrett" class="ingrediens">
 </form>
 <?php
