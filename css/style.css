@@ -240,7 +240,7 @@ a {
     height: 30px;
 }
 
-.button2 {
+.button2, .slettRett {
     height: 30px;
     width: 70vw;
     margin-bottom: 8px;

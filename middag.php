@@ -57,7 +57,7 @@ while ($row = $result->fetch_assoc()) {
             echo "<li class='marker'>" . $row['ing13'] . "</li>";
         }
     }
-    echo "</ul><button class='button2'>Legg ingredienser i handleliste</button></div>";
+    echo "</ul><button class='button2'>Legg ingredienser i handleliste</button><button class='slettRett'>Slett rett</button></div>";
 }
 
 include "footer.php";
@@ -87,14 +87,10 @@ include "footer.php";
             .map(({
                 textContent
             }) => textContent);
-        console.log(markerText);
-
         var obj = markerText.reduce(function(acc, cur, i) {
             acc[i] = cur;
             return acc;
         }, {});
-
-        console.log(obj);
 
         /*         markerText.forEach(element => console.log(element));
                 let l = 1;
