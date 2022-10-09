@@ -69,23 +69,16 @@ include "footer.php";
         if (!btn) return;
         const ulId = btn.previousElementSibling.previousElementSibling.id;
         const sendId = {slett: ulId}
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", "/handleliste/php/addmiddag.php", true);
-        xhr.onload = (e) => {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    console.log(xhr.responseText);
-                } else {
-                    console.error(xhr.statusText);
-                }
+        const jsonSendId = JSON.stringify(sendId);
+        console.log(jsonSendId);
+        $.ajax({
+            type: 'POST',
+            url: '/handleliste/php/addmiddag.php',
+            data: sendId,
+            success: function(data) {
+                console.log(data)
             }
-        };
-        xhr.onerror = (e) => {
-            console.error(xhr.statusText);
-        };
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhr.send(JSON.sendId);
-        console.log("Sent! ", JSON.sendId)
+        });
     })
 
     function addMiddag() {
