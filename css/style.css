@@ -34,7 +34,7 @@ ul li.checked::before {
     top: 17px; 
     width: 3px;
     height: 6px;
-    border: solid black;
+    border: solid var(--text);
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -68,7 +68,6 @@ ul li.unchecked:nth-child(odd) {
 
 ul li.checked {
     background: var(--list);
-    color: dimgrey;;
 }
 
 
@@ -111,7 +110,6 @@ a {
     border-bottom-right-radius: 1em;
     background-color: var(--header);
     display: grid;
-    box-shadow: 1px 1px 7px 0 black;
 }
 
 .header {
