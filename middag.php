@@ -64,6 +64,30 @@ include "footer.php";
 ?>
 
 <script>
+    document.body.addEventListener("click", e => {
+        const btn = e.target.closest(".slettRett");
+        if (!btn) return;
+        const ulId = btn.previousElementSibling.previousElementSibling.id;
+        const sendId = new Map();
+        sendId.set('rettId', ulId);
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/handleliste/php/slettrett.php", true);
+        xhr.onload = (e) => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    console.log(xhr.responseText, "Success", sendId);
+                } else {
+                    console.error(xhr.statusText, "Failed");
+                }
+            }
+        };
+        xhr.onerror = (e) => {
+            console.error(xhr.statusText);
+        };
+        xhr.send(sendId);
+        console.log("Sent!")
+    })
+
     function addMiddag() {
         window.location.href = "lagmiddag.php";
     }
