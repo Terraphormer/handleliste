@@ -76,7 +76,7 @@ include "../header.php";
                         <input type="submit" class="btnreg" value="Logg inn">
                         <input type="reset" class="btnres" value="Slett">
                 </form>
-                <a href="signup.php" class="nybruker"><button class="knapp">Gå til registrering</button></a>
+                <a href="signup.php" class="nybruker"><button class="knapp">Opprett bruker</button></a>
         </div>
 
 <?php
