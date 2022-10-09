@@ -83,8 +83,9 @@ include "footer.php";
         xhr.onerror = (e) => {
             console.error(xhr.statusText);
         };
-        xhr.send(sendId);
-/*         console.log("Sent! ", sendId) */
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send(JSON.sendId);
+        console.log("Sent! ", JSON.sendId)
     })
 
     function addMiddag() {

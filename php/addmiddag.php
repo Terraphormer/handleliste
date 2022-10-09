@@ -45,7 +45,8 @@ $param_navn = $_POST['9'];
 $stmt->execute();
 
 $stmt->close();
-
+var_dump($_POST);
+echo $_POST['slett'];
 if (isset($_POST['slett'])) {
     $sql = "DELETE FROM middag WHERE id = ?";
     $stmt = $conn->prepare($sql);
