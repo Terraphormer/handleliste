@@ -68,7 +68,9 @@ include "footer.php";
         const btn = e.target.closest(".slettRett");
         if (!btn) return;
         const ulId = btn.previousElementSibling.previousElementSibling.id;
-        const sendId = {slett: ulId}
+        const sendId = {
+            slett: ulId
+        }
         const jsonSendId = JSON.stringify(sendId);
         console.log(jsonSendId);
         $.ajax({
@@ -76,7 +78,7 @@ include "footer.php";
             url: '/handleliste/php/addmiddag.php',
             data: sendId,
             success: function(data) {
-                console.log(data)
+                location.reload();
             }
         });
     })
@@ -136,13 +138,12 @@ include "footer.php";
                     } : obj, {})
                 })
                 */
-                console.log(obj); 
+        console.log(obj);
         $.ajax({
             type: 'POST',
             url: 'php/addmiddag.php',
             data: obj,
             success: function(data) {
-                console.log(data)
             }
         });
     }, {
