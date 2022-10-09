@@ -31,7 +31,7 @@ echo $add_err;
 
 <ul id='unchecked'></ul>
 <div class="toggleFullført">
-    <button id="toggleFullført" onclick="toggleFullført()">Vis/Gjem fullførte</button>
+    <button id="toggleFullført" onclick="toggleFullført()">Fullført</button>
     <button id ="toggleHide" onclick="toggleHide()">Fjern fullførte</button>
 </div>
 <ul id='checked'></ul>
