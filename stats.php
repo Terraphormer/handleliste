@@ -38,7 +38,7 @@ $topTreTreNr = array_key_first(array_flip($topTreEn));
         <p>Hvorav <span style="font-weight: bold;"><?php echo count($numberOfItems); ?></span> elementer er unike.</p>
     </div>
     <div class="stats">
-        <p>Dine top 3 er:<br>
+        <p>Dine topp 3 er:<br>
             1. <span style="font-weight: bold;"><?php echo array_key_first($topTreEn); ?></span>. Handlet <span style="font-weight: bold;"><?php echo $topTreEnNr; ?></span> ganger.<br>
             2. <span style="font-weight: bold;"><?php echo array_key_first($topTreTo); ?></span>. Handlet <span style="font-weight: bold;"><?php echo $topTreToNr; ?></span> ganger.<br>
             3. <span style="font-weight: bold;"><?php echo array_key_first($topTreTre); ?></span>. Handlet <span style="font-weight: bold;"><?php echo $topTreTreNr; ?></span> ganger.<br>
