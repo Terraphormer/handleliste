@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="submit" class="btnreg" value="Opprett bruker">
                     <input type="reset" class="btnres" value="Slett">
 
-                <p class="extusr">Har du en eksisterende bruker? <a href="login.php">Gå til inlogging</a>.</p>
+                <p><a href="login.php">Gå til inlogging</a></p>
             </form>
         </div>
 <?php
