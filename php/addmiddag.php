@@ -46,10 +46,10 @@ $stmt->execute();
 
 $stmt->close();
 
-if ($_POST['slett'] == 1) {
+if (isset($_POST['slett'])) {
     $sql = "DELETE FROM middag WHERE id = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $_POST['id']);
+    $stmt->bind_param("i", $_POST['slett']);
     $stmt->execute();
     $stmt->close();
 }

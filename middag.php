@@ -68,8 +68,7 @@ include "footer.php";
         const btn = e.target.closest(".slettRett");
         if (!btn) return;
         const ulId = btn.previousElementSibling.previousElementSibling.id;
-        const sendId = new Map();
-        sendId.set('slett', ulId);
+        const sendId = {slett: ulId};
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "/handleliste/php/addmiddag.php", true);
         xhr.onload = (e) => {
