@@ -43,11 +43,11 @@ ul li {
 }
 
 ul li.unchecked {
-    background: hsl(210, 77%, 68%);
+    background: rgb(238, 238, 238);
 }
 
 ul li.unchecked:nth-child(odd) {
-    background: hsl(210, 76%, 80%);
+    background: rgb(224, 224, 224);
 }
 
 ul li.checked {
