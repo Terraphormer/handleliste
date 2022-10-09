@@ -71,7 +71,6 @@ include "footer.php";
         const sendId = {
             slett: ulId
         }
-        const jsonSendId = JSON.stringify(sendId);
         console.log(jsonSendId);
         $.ajax({
             type: 'POST',
@@ -110,6 +109,9 @@ include "footer.php";
             acc[i] = cur;
             return acc;
         }, {});
+
+        btn.classList.add("click");
+        btn.innerHTML = "Lagt til i handleliste";
 
         /*         markerText.forEach(element => console.log(element));
                 let l = 1;
