@@ -68,15 +68,15 @@ include "footer.php";
         const btn = e.target.closest(".slettRett");
         if (!btn) return;
         const ulId = btn.previousElementSibling.previousElementSibling.id;
-        const sendId = {slett: ulId};
+        const sendId = {slett: ulId}
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "/handleliste/php/addmiddag.php", true);
         xhr.onload = (e) => {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
-                    console.log(xhr.responseText, "Success", sendId);
+                    console.log(xhr.responseText);
                 } else {
-                    console.error(xhr.statusText, "Failed");
+                    console.error(xhr.statusText);
                 }
             }
         };
@@ -141,8 +141,8 @@ include "footer.php";
                         [`ing${i+1}`]: el.innerHTML
                     } : obj, {})
                 })
-
-                console.log(data); */
+                */
+                console.log(obj); 
         $.ajax({
             type: 'POST',
             url: 'php/addmiddag.php',
