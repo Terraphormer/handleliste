@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $stmt->execute();
         $stmt->close();
         $conn->close();
-        echo "Fullført, du kan legge til flere retter, eller <a href='middag.php'>Gå tilbake til oversikten</a>";
+        echo "<p class='text'>Fullført, du kan legge til flere retter, eller <a href='middag.php'>Gå tilbake til oversikten</a></p>";
     }
 }
 ?>
