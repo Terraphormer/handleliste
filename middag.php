@@ -69,9 +69,9 @@ include "footer.php";
         if (!btn) return;
         const ulId = btn.previousElementSibling.previousElementSibling.id;
         const sendId = new Map();
-        sendId.set('rettId', ulId);
+        sendId.set('slett', ulId);
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "/handleliste/php/slettrett.php", true);
+        xhr.open("POST", "/handleliste/php/addmiddag.php", true);
         xhr.onload = (e) => {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
