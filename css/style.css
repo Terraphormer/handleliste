@@ -299,6 +299,7 @@ a {
     border-radius: 1em;
     outline: none;
     transition: 0.4s;
+    box-shadow: 1px 1px 8px;
 }
 
 .dropdown:nth-of-type(odd) {
