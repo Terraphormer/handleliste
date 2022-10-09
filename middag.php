@@ -84,7 +84,7 @@ include "footer.php";
             console.error(xhr.statusText);
         };
         xhr.send(sendId);
-        console.log("Sent!")
+/*         console.log("Sent! ", sendId) */
     })
 
     function addMiddag() {
