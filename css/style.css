@@ -1,10 +1,11 @@
 :root {
     --behind: hsl(206, 46%, 32%);
-    --header: hsl(76, 13%, 40%);
-    --hiddenMenu: hsl(75, 13%, 48%);
-    --list: hsl(75, 13%, 48%);
-    --listOdd: hsl(74, 13%, 56%);
+    --header: hsl(206, 46%, 36%);
+    --hiddenMenu: hsl(206, 46%, 44%);
+    --list: hsl(206, 46%, 44%);
+    --listOdd: hsl(206, 46%, 48%);
     --dinner: hsl(206, 46%, 32%);
+    --text: white;
 }
 * {
     box-sizing: border-box;
@@ -22,7 +23,8 @@ ul {
     margin: 8px 8px;
     padding: 0;
     text-align: left;
-    font-family: 'Courier New', monospace;
+/*     font-family: 'Courier New', monospace; */
+    color: var(--text);
 }
 
 ul li.checked::before {
@@ -41,6 +43,7 @@ ul li.checked::before {
 }
 
 ul li {
+    color: var(--text);
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 30px;
@@ -53,6 +56,10 @@ ul li {
 
 ul li.unchecked {
     background: var(--list);
+}
+
+ul li.unchecked::marker{
+    content: "";
 }
 
 ul li.unchecked:nth-child(odd) {
@@ -93,7 +100,7 @@ a {
 }
 
 .header, .hiddenmenu {
-    font-family: 'Courier New', monospace;
+/*     font-family: 'Courier New', monospace; */
     letter-spacing: 1px;
     position: fixed;
     top: 0;
@@ -261,6 +268,7 @@ a {
 
 .button2, .slettRett {
     background: var(--header);
+    color: var(--text);
     height: 30px;
     width: 70vw;
     margin-bottom: 8px;
@@ -274,30 +282,36 @@ a {
     width: 80vw;
 }
 
+.text {
+    color: white;
+    margin: 8px;
+}
+
 .toggleFullført {
     text-align-last: justify;
     text-align: start;
     margin-left: 8px;
     margin-right: 8px;
+    color: var(--text);
 }
 
 
 #toggleFullført {
+    color: var(--text);
     background: var(--header);
     border-radius: 0.5em;
     border: none;
     height: 30px;
     width: 25%;
-    box-shadow: 1px 1px 6px;
 }
 
 #toggleHide {
+    color: var(--text);
     background: var(--header);
     border-radius: 0.5em;
     border: none;
     height: 30px;
     width: 25%;
-    box-shadow: 1px 1px 6px;
 }
 
 .dropdown {
@@ -313,7 +327,7 @@ a {
     border-radius: 1em;
     outline: none;
     transition: 0.4s;
-    box-shadow: 1px 1px 8px;
+    color: var(--text);
 }
 
 .dropdown:nth-of-type(odd) {
@@ -329,11 +343,11 @@ a {
 }
 
 .nomarker {
-    color: white;
+    color: var(--text);
 }
 
 .marker {
-    color: white;
+    color: var(--text);
 }
 
 .marker::marker {
@@ -344,11 +358,10 @@ a {
     content: "";
 }
 
-#checked, #unchecked {
-    box-shadow: 1px 1px 8px;
-}
-
 .statsGrid {
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: var(--text);
     width: 95vw;
     margin: auto;
     display: grid;
@@ -356,7 +369,6 @@ a {
     background-color: var(--list);
     border-radius: 1em;
     text-align: left;
-    box-shadow: 0px 0px 15px;
 }
 
 .stats {

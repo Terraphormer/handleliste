@@ -11,7 +11,7 @@ $stmt->bind_param("i", $uid);
 $stmt->execute();
 $result = $stmt->get_result();
 
-echo "<p style='margin: 8px;'>Har du noen av ingrediensene fra før? Kryss de vekk før du legger til!</p>";
+echo "<p class='text'>Kryss vekk ingrendienser du allerede har</p>";
 
 while ($row = $result->fetch_assoc()) {
     if (!empty($row['navn'])) {
